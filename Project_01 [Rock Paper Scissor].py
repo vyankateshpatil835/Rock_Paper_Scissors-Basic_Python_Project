@@ -1,27 +1,34 @@
 while True:
-    print('''WELCOME!
-    LET'S PLAY...!!! ''')
+    print('''\t\n\nWELCOME!
+    \tLET'S PLAY...!!! ''')
+    print('''*********************************************************''')
     import random
     radnum=random.randint(1,3)
     ## Function
     def game_win(c, y):
         if c==y:
-            print("it's a tie")
+            print("\tit's a tie\n")
+            print('''>>>>>>>>>>>>>>>>>>>>>>>>xxxxxxxxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<''')
         elif c==1 and y==2:
-            print('you win!')
+            print('\tyou win!\n')
+            print('''>>>>>>>>>>>>>>>>>>>>>>>>xxxxxxxxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<''')
         elif c==2 and y==3:
-            print('you win!')
+            print('\tyou win!\n')
+            print('''>>>>>>>>>>>>>>>>>>>>>>>>xxxxxxxxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<''')
         elif c==3 and y==1:
-            print('you win!')
+            print('\tyou win!\n')
+            print('''>>>>>>>>>>>>>>>>>>>>>>>>xxxxxxxxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<''')        
         else:
-            print('you lose!')
+            print('\tyou lose!\n')
+            print('''>>>>>>>>>>>>>>>>>>>>>>>>xxxxxxxxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<''')
     ## Controls
     print('''For Rock press 1
     For Paper press 2
     For Scissors press 3
     ''') 
+    print('''*********************************************************''')
     ## Computer selection [Backend]
-    comp=print('Comp choice: Rock, Paper, Scissors ?')
+    comp=print('\nComp choice: Rock, Paper, Scissors ?\n--> ...!')
     if radnum==1:
         comp=1
     elif radnum==2:
@@ -30,23 +37,27 @@ while True:
         comp=3
 
     ## Your choice
-    you=int(input('Your trun: Rock, Paper, Scissors ?\n'))
+    you=int(input('\nYour trun: Rock, Paper, Scissors ?\n--> '))
     if you==1:
-        print('You choosed Rock')
+        print('\nYou choosed Rock')
     elif you==2:
-        print('You choosed Paper')
+        print('\nYou choosed Paper')
     elif you==3:
-        print('You choosed Scissors')
+        print('\nYou choosed Scissors')
+    
     else:
-        print('please Enter 1, 2 or 3')
+        print('\nplease Enter 1, 2 or 3')
 
     ## computer choice [Frontend]
     if comp==1:
         print('Computer choosed Rock')
+        print('''*********************************************************\n''')
     elif comp==2:
         print('Computer choosed Paper')
+        print('''*********************************************************\n''')
     elif comp==3:
         print('Computer choosed Scissors')
+        print('''*********************************************************\n''')
     game_win(comp,you)
 
 
